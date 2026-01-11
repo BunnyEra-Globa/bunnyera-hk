@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BunnyEra Dashboard - Manage your APAC cross-border e-commerce operations">
+    <title>Dashboard - BunnyEra HK</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+    <!-- Dashboard Navigation -->
+    <nav class="navbar dashboard-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="bunny-icon">🐰</span>
+                <span class="brand-name">BunnyEra</span>
+                <span class="brand-location">Dashboard</span>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html" class="nav-link">← Back to Home</a>
+                <button class="btn-icon" title="Notifications">🔔</button>
+                <button class="btn-icon" title="User Profile">👤</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#overview" class="sidebar-link active">
+                    <span class="sidebar-icon">📊</span>
+                    <span class="sidebar-text">Overview</span>
+                </a>
+                <a href="#supply-chain" class="sidebar-link">
+                    <span class="sidebar-icon">📦</span>
+                    <span class="sidebar-text">Supply Chain</span>
+                </a>
+                <a href="#marketing" class="sidebar-link">
+                    <span class="sidebar-icon">📈</span>
+                    <span class="sidebar-text">Marketing</span>
+                </a>
+                <a href="#operations" class="sidebar-link">
+                    <span class="sidebar-icon">⚙️</span>
+                    <span class="sidebar-text">Operations</span>
+                </a>
+                <a href="#payments" class="sidebar-link">
+                    <span class="sidebar-icon">💳</span>
+                    <span class="sidebar-text">Payments</span>
+                </a>
+                <a href="#analytics" class="sidebar-link">
+                    <span class="sidebar-icon">📉</span>
+                    <span class="sidebar-text">Analytics</span>
+                </a>
+                <a href="#settings" class="sidebar-link">
+                    <span class="sidebar-icon">⚙️</span>
+                    <span class="sidebar-text">Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h1 class="dashboard-title">Welcome to Your Dashboard</h1>
+                    <p class="dashboard-subtitle">Monitor and manage your APAC cross-border operations</p>
+                </div>
+                <div class="dashboard-header-actions">
+                    <button class="btn btn-secondary">Export Report</button>
+                    <button class="btn btn-primary">New Campaign</button>
+                </div>
+            </header>
+
+            <!-- Metrics Cards -->
+            <section id="overview" class="metrics-section">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Total Revenue</span>
+                            <span class="metric-trend positive">+12.5%</span>
+                        </div>
+                        <div class="metric-value">$1,245,890</div>
+                        <div class="metric-footer">
+                            <span class="metric-icon">💰</span>
+                            <span>vs. last month</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Active Orders</span>
+                            <span class="metric-trend positive">+8.3%</span>
+                        </div>
+                        <div class="metric-value">2,847</div>
+                        <div class="metric-footer">
+                            <span class="metric-icon">📦</span>
+                            <span>across APAC</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Customer Satisfaction</span>
+                            <span class="metric-trend positive">+3.2%</span>
+                        </div>
+                        <div class="metric-value">94.8%</div>
+                        <div class="metric-footer">
+                            <span class="metric-icon">⭐</span>
+                            <span>avg. rating 4.7/5</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Markets Active</span>
+                            <span class="metric-trend neutral">→</span>
+                        </div>
+                        <div class="metric-value">15</div>
+                        <div class="metric-footer">
+                            <span class="metric-icon">🌏</span>
+                            <span>APAC regions</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Revenue by Market</h3>
+                            <select class="chart-filter">
+                                <option>Last 30 days</option>
+                                <option>Last 90 days</option>
+                                <option>Last year</option>
+                            </select>
+                        </div>
+                        <div class="chart-content">
+                            <div class="bar-chart">
+                                <div class="bar-chart-item">
+                                    <div class="bar-label">Hong Kong</div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-fill" style="width: 85%"></div>
+                                    </div>
+                                    <div class="bar-value">$425K</div>
+                                </div>
+                                <div class="bar-chart-item">
+                                    <div class="bar-label">Singapore</div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-fill" style="width: 72%"></div>
+                                    </div>
+                                    <div class="bar-value">$360K</div>
+                                </div>
+                                <div class="bar-chart-item">
+                                    <div class="bar-label">Japan</div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-fill" style="width: 58%"></div>
+                                    </div>
+                                    <div class="bar-value">$290K</div>
+                                </div>
+                                <div class="bar-chart-item">
+                                    <div class="bar-label">South Korea</div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-fill" style="width: 45%"></div>
+                                    </div>
+                                    <div class="bar-value">$225K</div>
+                                </div>
+                                <div class="bar-chart-item">
+                                    <div class="bar-label">Taiwan</div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-fill" style="width: 38%"></div>
+                                    </div>
+                                    <div class="bar-value">$190K</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Supply Chain Status</h3>
+                            <button class="btn-icon">⋮</button>
+                        </div>
+                        <div class="chart-content">
+                            <div class="status-list">
+                                <div class="status-item">
+                                    <div class="status-info">
+                                        <span class="status-dot status-success"></span>
+                                        <span class="status-label">On-time Deliveries</span>
+                                    </div>
+                                    <span class="status-value">92%</span>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-info">
+                                        <span class="status-dot status-warning"></span>
+                                        <span class="status-label">In Transit</span>
+                                    </div>
+                                    <span class="status-value">1,245</span>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-info">
+                                        <span class="status-dot status-info"></span>
+                                        <span class="status-label">Processing</span>
+                                    </div>
+                                    <span class="status-value">456</span>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-info">
+                                        <span class="status-dot status-error"></span>
+                                        <span class="status-label">Delayed</span>
+                                    </div>
+                                    <span class="status-value">23</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section id="supply-chain" class="activity-section">
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <h3>Recent Shipments</h3>
+                        <a href="#" class="link">View All →</a>
+                    </div>
+                    <div class="activity-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tracking ID</th>
+                                    <th>Origin</th>
+                                    <th>Destination</th>
+                                    <th>Status</th>
+                                    <th>ETA</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>BNY-HK-2401-001</code></td>
+                                    <td>Hong Kong</td>
+                                    <td>Singapore</td>
+                                    <td><span class="badge badge-success">In Transit</span></td>
+                                    <td>Jan 12, 2026</td>
+                                    <td><button class="btn-link">Track</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>BNY-HK-2401-002</code></td>
+                                    <td>Shenzhen</td>
+                                    <td>Tokyo</td>
+                                    <td><span class="badge badge-warning">Processing</span></td>
+                                    <td>Jan 15, 2026</td>
+                                    <td><button class="btn-link">Track</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>BNY-HK-2401-003</code></td>
+                                    <td>Hong Kong</td>
+                                    <td>Seoul</td>
+                                    <td><span class="badge badge-success">In Transit</span></td>
+                                    <td>Jan 13, 2026</td>
+                                    <td><button class="btn-link">Track</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>BNY-HK-2401-004</code></td>
+                                    <td>Guangzhou</td>
+                                    <td>Taipei</td>
+                                    <td><span class="badge badge-info">Customs</span></td>
+                                    <td>Jan 14, 2026</td>
+                                    <td><button class="btn-link">Track</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>BNY-HK-2401-005</code></td>
+                                    <td>Hong Kong</td>
+                                    <td>Bangkok</td>
+                                    <td><span class="badge badge-success">In Transit</span></td>
+                                    <td>Jan 11, 2026</td>
+                                    <td><button class="btn-link">Track</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Marketing Performance -->
+            <section id="marketing" class="marketing-section">
+                <div class="section-header">
+                    <h2>Marketing Performance</h2>
+                    <p>Track your campaigns across APAC markets</p>
+                </div>
+                
+                <div class="marketing-grid">
+                    <div class="marketing-card">
+                        <div class="marketing-icon">🎯</div>
+                        <h4>Active Campaigns</h4>
+                        <div class="marketing-value">24</div>
+                        <p>across 8 markets</p>
+                    </div>
+                    
+                    <div class="marketing-card">
+                        <div class="marketing-icon">👥</div>
+                        <h4>Total Reach</h4>
+                        <div class="marketing-value">2.4M</div>
+                        <p>impressions this month</p>
+                    </div>
+                    
+                    <div class="marketing-card">
+                        <div class="marketing-icon">💰</div>
+                        <h4>ROI</h4>
+                        <div class="marketing-value">385%</div>
+                        <p>average return</p>
+                    </div>
+                    
+                    <div class="marketing-card">
+                        <div class="marketing-icon">🔄</div>
+                        <h4>Conversion Rate</h4>
+                        <div class="marketing-value">6.8%</div>
+                        <p>+1.2% vs last month</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section id="operations" class="quick-actions-section">
+                <h3>Quick Actions</h3>
+                <div class="quick-actions-grid">
+                    <button class="quick-action-card">
+                        <span class="quick-action-icon">📦</span>
+                        <span class="quick-action-label">Create Shipment</span>
+                    </button>
+                    <button class="quick-action-card">
+                        <span class="quick-action-icon">📊</span>
+                        <span class="quick-action-label">Generate Report</span>
+                    </button>
+                    <button class="quick-action-card">
+                        <span class="quick-action-icon">🎯</span>
+                        <span class="quick-action-label">New Campaign</span>
+                    </button>
+                    <button class="quick-action-card">
+                        <span class="quick-action-icon">💳</span>
+                        <span class="quick-action-label">Process Payment</span>
+                    </button>
+                    <button class="quick-action-card">
+                        <span class="quick-action-icon">👥</span>
+                        <span class="quick-action-label">Invite Team</span>
+                    </button>
+                    <button class="quick-action-card">
+                        <span class="quick-action-icon">⚙️</span>
+                        <span class="quick-action-label">Settings</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
