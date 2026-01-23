@@ -2,89 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>World Clock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BunnyEra World Clock - Track time zones across global markets" />
+  <title>World Clock - BunnyEra HK</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    :root { color-scheme: light dark; }
-    body {
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      margin: 0; padding: 24px;
-      background: #0b1020; color: #e8ecff;
+    .clock-section {
+      padding-top: 4rem;
+      background: var(--bg-light);
     }
-    .wrap { max-width: 900px; margin: 0 auto; }
-    h1 { margin: 0 0 16px; font-size: 20px; font-weight: 700; letter-spacing: .2px; }
-    .grid {
+    .clock-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0 2.5rem;
+    }
+    .clock-controls label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+    .clock-controls select {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      background: var(--bg-white);
+      color: var(--text-dark);
+    }
+    .clock-buttons {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .clock-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
+      gap: 1.5rem;
     }
-    .card {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
+    .clock-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 14px 14px 12px;
-      backdrop-filter: blur(8px);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      text-align: left;
     }
-    .label { display:flex; justify-content:space-between; align-items:baseline; gap: 8px; }
-    .city { font-size: 14px; font-weight: 700; }
-    .tz { font-size: 12px; opacity: .8; }
-    .time {
+    .clock-card .label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+    .clock-card .city {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .clock-card .tz {
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+    .clock-card .time {
       font-variant-numeric: tabular-nums;
-      font-size: 34px;
-      margin-top: 6px;
-      letter-spacing: .5px;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-top: 0.5rem;
     }
-    .date { margin-top: 4px; font-size: 12px; opacity: .85; }
-    .note { margin-top: 14px; font-size: 12px; opacity: .8; }
-    select, button, input {
-      font: inherit;
+    .clock-card .date {
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+      color: var(--text-light);
     }
-    .controls {
-      margin: 12px 0 18px;
-      display:flex; flex-wrap:wrap; gap:10px; align-items:center;
-    }
-    .controls select {
-      background: rgba(255,255,255,.08);
-      color: inherit;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 10px;
-      padding: 8px 10px;
-      outline: none;
-    }
-    .controls button{
-      background: #3b82f6;
-      color: white;
-      border: 0;
-      border-radius: 10px;
-      padding: 8px 12px;
+    .clock-remove {
+      margin-top: 1rem;
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      color: var(--text-dark);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
       cursor: pointer;
     }
-    .controls button.secondary{
-      background: rgba(255,255,255,.10);
-      color: inherit;
-      border: 1px solid rgba(255,255,255,.18);
+    .clock-note {
+      margin-top: 2rem;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>World Clock (Multiple Time Zones)</h1>
-
-    <div class="controls">
-      <label>
-        Add timezone:
-        <select id="tzSelect"></select>
-      </label>
-      <button id="addBtn">Add</button>
-      <button id="resetBtn" class="secondary">Reset</button>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <span class="bunny-icon">🐰</span>
+        <span class="brand-name">BunnyEra</span>
+        <span class="brand-location">Hong Kong</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="clock.html" class="nav-link active">World Clock</a></li>
+        <li><a href="dashboard.html" class="nav-link btn-dashboard">Dashboard</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div id="grid" class="grid"></div>
+  <section class="services clock-section">
+    <div class="container">
+      <h1 class="section-title">World Clock</h1>
+      <p class="section-subtitle">Stay aligned with partners across APAC and global markets.</p>
 
-    <div class="note">
-      Uses <code>Intl.DateTimeFormat</code> (no external libraries). Time zone support depends on your browser/OS.
+      <div class="clock-controls">
+        <label>
+          Add timezone:
+          <select id="tzSelect"></select>
+        </label>
+        <div class="clock-buttons">
+          <button id="addBtn" class="btn btn-primary">Add</button>
+          <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        </div>
+      </div>
+
+      <div id="grid" class="clock-grid"></div>
+
+      <div class="clock-note">
+        Uses <code>Intl.DateTimeFormat</code> (no external libraries). Time zone support depends on your browser/OS.
+      </div>
     </div>
-  </div>
+  </section>
 
   <script>
     // A friendly default set
@@ -164,7 +216,7 @@
 
       state.zones.forEach((z, idx) => {
         const card = document.createElement("div");
-        card.className = "card";
+        card.className = "clock-card";
 
         const top = document.createElement("div");
         top.className = "label";
@@ -192,8 +244,7 @@
 
         const remove = document.createElement("button");
         remove.textContent = "Remove";
-        remove.className = "secondary";
-        remove.style.marginTop = "10px";
+        remove.className = "clock-remove";
         remove.onclick = () => {
           state.zones.splice(idx, 1);
           save();
