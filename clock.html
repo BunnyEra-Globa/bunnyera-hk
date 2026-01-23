@@ -9,6 +9,7 @@
   <style>
     .clock-section {
       padding-top: 4rem;
+      background: var(--bg-light);
     }
     .clock-controls {
       display: flex;
@@ -37,15 +38,6 @@
       gap: 0.75rem;
       flex-wrap: wrap;
       justify-content: center;
-    }
-    .clock-controls .btn-primary {
-      background: var(--primary-color);
-      color: white;
-    }
-    .clock-controls .btn-secondary {
-      background: var(--bg-light);
-      color: var(--text-dark);
-      border: 1px solid var(--border-color);
     }
     .clock-grid {
       display: grid;
@@ -125,8 +117,8 @@
           <select id="tzSelect"></select>
         </label>
         <div class="clock-buttons">
-          <button id="addBtn" class="btn btn-primary">Add</button>
-          <button id="resetBtn" class="btn btn-secondary">Reset</button>
+          <button id="addBtn" class="btn btn-dashboard">Add</button>
+          <button id="resetBtn" class="btn btn-primary">Reset</button>
         </div>
       </div>
 
