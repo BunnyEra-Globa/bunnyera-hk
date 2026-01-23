@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -45,6 +45,11 @@
       gap: 1.5rem;
     }
     .clock-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
       text-align: left;
     }
     .clock-card .label {
@@ -210,7 +215,7 @@
 
       state.zones.forEach((z, idx) => {
         const card = document.createElement("div");
-        card.className = "service-card clock-card";
+        card.className = "clock-card";
 
         const top = document.createElement("div");
         top.className = "label";
